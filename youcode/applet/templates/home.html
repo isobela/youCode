@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <!-- Add your CSS files here -->
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-</head>
-<body>
-    <header>
-        <h1>Welcome to the Home Page</h1>
-    </header>
+    {% extends "base.html" %}
 
-    <main>
-        <!-- Add your content here -->
-    </main>
-
-    <footer>
-        <!-- Add your footer content here -->
-    </footer>
-
-    <!-- Add your JavaScript files here -->
-    <!-- <script src="script.js"></script> -->
-</body>
+    {% block title %}Home{% endblock %}
+    
+    {% block content %}
+    {% if user.is_authenticated %}
+    Hi {{ user.username }}!
+    {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+    {% endblock %}
 </html>

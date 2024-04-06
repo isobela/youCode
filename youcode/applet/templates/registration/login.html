@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <!-- Add your CSS file here -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<!-- templates/registration/login.html -->
-<h2>Log In</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form }}
-  <button type="submit">Log In</button>
-</form>
-</body>
+    {% extends "base.html" %}
+
+    {% block title %}Login{% endblock %}
+    
+    {% block content %}
+    <h2>Log In</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form }}
+      <button type="submit">Log In</button>
+    </form>
+    {% endblock %}
 </html></form>
