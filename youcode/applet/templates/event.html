@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Sign Up{% endblock %}
+{% block title %}Event Details{% endblock %}
 
 {% block content %}
 <div class="navbar">
@@ -17,12 +17,9 @@
         <a href="{% url 'signup' %}">Sign Up Here</a>
     </div>
 </div>
-<p></p>
-<div class="sign-up-container"></div>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ event.event_name }}</title>
-    <div>
+<div class="event-details-container">
+    
+    <div class="event-details" style="font-family: 'Lato', sans-serif;">
         <h1>{{ event.event_name }}</h1>
         <p><strong>Date:</strong> {{ event.event_date }}</p>
         <p><strong>Location:</strong> {{ event.location }}</p>
@@ -36,7 +33,7 @@
         </ul>
         <p><strong>Image:</strong></p>
         <img src="{{ event.image.url }}" alt="{{ event.event_name }}">
-        <p><strong>Coins:</strong> {{ event.coins }}</p>
+        <p><strong>Coins to be earned:</strong> {{ event.coins }}</p>
     </div>
 </div>
 {% endblock %}

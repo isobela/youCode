@@ -105,6 +105,7 @@ h1 {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
     margin-bottom: 50px;
+    margin-top: 20px;
 }
 .event-image img {
     width: 200px;
@@ -261,4 +262,24 @@ h1 {
 
 .green-button:hover {
     background-color: #5F7D4C; /* Darker green color on hover */
+}
+
+.event-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Make the container full height of the viewport */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.event-details {
+    max-width: 800px; /* Limit the width of the event details */
+    text-align: center;
+    margin-top: 20px; /* Add some space at the top */
+}
+
+.event-details img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
 }
