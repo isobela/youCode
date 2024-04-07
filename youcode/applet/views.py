@@ -4,8 +4,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from .models import Prize
-from .models import Event
+from .models import Event, UserProfile
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 def home(request):
@@ -29,7 +31,9 @@ def upload_event(request):
 
 def prize_list(request):
     prizes = Prize.objects.all()
-    return render(request, 'prize_list.html', {'prizes': prizes})
+    user = request.user
+    user_profile = UserProfile.objects.get(user=user)
+    return render(request, 'prize_list.html', {'prizes': prizes, 'userprofile': user_profile})
 
 def about_us(request):
     return render(request, 'about_us.html')

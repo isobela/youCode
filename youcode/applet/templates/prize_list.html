@@ -49,8 +49,15 @@
             <p>Points Required: 50,000</p>
             <img id="prize3_image" src="/media/prize_images/backpack.jpg" alt="Backpack">
         </div>
-    </div> -->
-<!-- </body> -->
+    </div>
+    {% if request.user.is_authenticated %}
+    <p> You have , {{ userprofile.coins }} coins !</p>
+    <!-- Display features for authenticated users -->
+{% else %}
+    <p>You have no coins</p>
+    <!-- Display features for guests -->
+{% endif %}
+</body>
 
     <!-- <h1>Prize List</h1>
     {% for prize in prizes %}
