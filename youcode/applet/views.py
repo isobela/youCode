@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from .models import Prize
+from .models import Event
 
 
 def home(request):
@@ -20,7 +21,7 @@ def upload_event(request):
         form = EventForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('event_list')  # Redirect to event list page
+            return redirect('home')  # Redirect to event list page
     else:
         form = EventForm()
     return render(request, 'upload.html', {'form': form})
@@ -28,3 +29,4 @@ def upload_event(request):
 def prize_list(request):
     prizes = Prize.objects.all()
     return render(request, 'prize_list.html', {'prizes': prizes})
+
