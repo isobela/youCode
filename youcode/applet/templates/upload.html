@@ -1,14 +1,33 @@
+<!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="/applet/static/styles.css">
 <head>
     <meta charset="UTF-8">
     <title>Upload Event</title>
 </head>
 <body>
-    <h1>Upload Event</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
+    <div class="navbar">
+        <div>
+            <img src="/applet/static/images/Logo.png" alt="Logo" class="logo">
+            <link rel="stylesheet" type="text/css"  href="/applet/static/styles.css">
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="{% url 'about_us' %}">About Us</a></li>
+            <a href="#">Workshops</a>
+            <a href="{% url 'upload_event' %}">Create</a>
+            <a href="{% url 'prize_list' %}">Prizes</a>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'signup' %}">Sign Up Here</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Upload Event</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
