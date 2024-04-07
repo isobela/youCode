@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 class People(models.Model):
     name = models.CharField(max_length=200)
@@ -7,6 +8,7 @@ class People(models.Model):
 
 class Event(models.Model):
     event_name = models.CharField(max_length=100)
+    event_date = models.DateTimeField("Event date", default= datetime.now)
     location = models.CharField(max_length=200)
     instructor = models.ForeignKey(People, on_delete=models.CASCADE, related_name='instructed_events')  
     # Specify a unique related_name for instructor

@@ -41,24 +41,12 @@
 </div>
 <div class="upcoming-events">
     <h2>Upcoming Events</h2>
-    <div class="event">
-        <div class="event-image">
-            <a href="#"><img src="/youcode/images/yoga.png" alt="Morning Yoga Sessions"></a>
-        </div>
-        <div class="event-label">Morning Yoga Sessions</div>
-    </div>
-    <div class="event">
-        <div class="event-image">
-            <a href="#"><img src="/youcode/images/hiking.png" alt="Learn Hiking Basics and Essentials"></a>
-        </div>
-        <div class="event-label">Learn Hiking Basics and Essentials</div>
-    </div>
-    <div class="event">
-        <div class="event-image">
-            <a href="#"><img src="/youcode/images/snowboarding.png" alt="Snowboard and Ski Trip to Cyp"></a>
-        </div>
-        <div class="event-label">Snowboard and Ski Trip to Cyp</div>
-    </div>
+    <h1>Event List</h1>
+    <ul>
+        {% for event in events %}
+            <li>{{ event.event_name }}</li>
+        {% endfor %}
+    </ul>
 </div>
 </body>
 </html>
