@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" type="text/css" href="/applet/static/styles.css">
+<link rel="stylesheet" href="/applet/static/styles.css">
 <title>Health&Harmony</title>
+
 
 </head>
 <body>
@@ -11,8 +15,15 @@
         <a href="/">
             <img src="/applet/static/images/Logo.png" alt="Logo" class="logo">
         </a>
-    </div></a>
     </div>
+    
+    {% if request.user.is_authenticated %}
+    <p>Welcome, {{ request.user.username }}!</p>
+    <!-- Display features for authenticated users -->
+{% else %}
+    <p>Welcome, Guest!</p>
+    <!-- Display features for guests -->
+{% endif %}
     <div class="nav-links">
         <a href="/">Home</a>
         <a href="{% url 'about_us' %}">About Us</a></li>
@@ -20,7 +31,6 @@
         <a href="{% url 'prize_list' %}">Prizes</a>
         <a href="{% url 'login' %}">Login</a>
         <a href="{% url 'signup' %}">Sign Up Here</a>
-    
     </div>
 </div>
 
