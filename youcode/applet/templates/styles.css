@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #7DA25F;
+    color: #fff;
+}
+.logo {
+    width: 250px; /* Adjust as needed */
+    height: auto;
+}
+h1 {
+    margin: 0;
+    margin-left: 10px; /* Add margin to separate logo and title */
+}
+.nav-links {
+    display: flex;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+}
+.placeholder-image {
+    width: 100%;
+    height: 700px; /* Adjust height as needed */
+    background-image: url('/youcode/images/home_background.png'); /* Placeholder image URL */
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px; /* Adjust margin as needed */
+    position: relative;
+}
+.search-bar-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search-bar {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.search-bar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.search-bar button {
+    background-color: #7DA25F;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.find-friends-text {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+}
+.upcoming-events {
+    text-align: center;
+    margin-top: 20px;
+}
+.event {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+    transition: transform 0.3s; /* Add transition for smooth effect */
+}
+.event-image img {
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+}
+.event-label {
+    font-weight: bold;
+}
+.event:hover {
+    transform: scale(1.1); /* Scale up by 10% on hover */
+}
