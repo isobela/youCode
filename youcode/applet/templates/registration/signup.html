@@ -3,34 +3,31 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-
 <div class="navbar">
     <div>
         <img src="/applet/static/images/Logo.png" alt="Logo" class="logo">
-        <link rel="stylesheet" type="text/css"  href="/applet/static/styles.css">
+        <link rel="stylesheet" type="text/css" href="/applet/static/styles.css">
     </div>
     <div class="nav-links">
-        <a href="{% url 'home' %}">Home</a>
-        <a href="#">About Us</a>
+        <a href="/">Home</a>
+        <a href="{% url 'about_us' %}">About Us</a></li>
         <a href="#">Workshops</a>
-        <a href="#">Create</a>
-        <a href="{% url 'login'%}">Login</a>
-        <a href="{% url 'signup'%}">Sign Up Here</a>
+        <a href="{% url 'upload_event' %}">Create</a>
+        <a href="{% url 'prize_list' %}">Prizes</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'signup' %}">Sign Up Here</a>
     </div>
 </div>
-<p></p>
 <div class="sign-up-container">
     <div class="signup-title">Sign Up</div>
     <div class="icon-placeholder" style="background-image: url('/applet/static/images/user_icon.jpg'); background-size: contain;"></div>
     <form method="post">
-        {% csrf_token %}
-        <div class="input">
-            <input type="text" name="username" placeholder="Username">
-        </div>
-        <div class="input">
-            <input type="password" name="password" placeholder="Password">
-        </div>
-        <button type="submit">Sign Up</button>
+      {% csrf_token %}
+      <div class="input">
+          {{ form }}
+      </div>
+      <button type="submit" class="login-button">Sign Up</button>
     </form>
+    <p>Have an account? <a href="{% url 'login' %}">Log in here</a></p>
 </div>
 {% endblock %}
