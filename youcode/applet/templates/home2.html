@@ -63,6 +63,12 @@
                 <p>Date: {{ event.event_date }}</p>
                 <p>Location: {{ event.location }}</p>
                 <p>Instructor: {{ event.instructor }}</p>
+
+                <form class="callDjangoFunctionForm" action="{% url 'event_display' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="event_id" value="{{ event.id }}">
+                    <button type="submit">View Event Details</button>
+                </form>
                 <!-- Add more details as needed -->
             </div>
         </div>
