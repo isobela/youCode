@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from forms import EventForm
+from .forms import EventForm
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
@@ -19,4 +19,4 @@ def upload_event(request):
             return redirect('event_list')  # Redirect to event list page
     else:
         form = EventForm()
-    return render(request, 'upload_event.html', {'form': form})
+    return render(request, 'upload.html', {'form': form})
