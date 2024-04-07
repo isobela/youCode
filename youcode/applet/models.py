@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from django.contrib.auth.models import User
 
 class People(models.Model):
     name = models.CharField(max_length=200)
@@ -10,10 +11,10 @@ class Event(models.Model):
     event_name = models.CharField(max_length=100)
     event_date = models.DateTimeField("Event date", default= datetime.now)
     location = models.CharField(max_length=200)
-    instructor = models.ForeignKey(People, on_delete=models.CASCADE, related_name='instructed_events')  
+    instructor = models.CharField(max_length=200)  
     # Specify a unique related_name for instructor
     description = models.CharField(max_length=500)
-    attendees = models.ManyToManyField(People, related_name='attended_events')  
+    attendees = models.ManyToManyField(User, related_name='attended_events')  
     # Specify a unique related_name for attendees
     image = models.ImageField(upload_to='event_images/')
     coins = models.IntegerField(default=0)

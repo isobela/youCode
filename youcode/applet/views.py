@@ -21,7 +21,7 @@ def upload_event(request):
         form = EventForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('event_list')  # Redirect to event list page
+            return redirect('home')  # Redirect to event list page
     else:
         form = EventForm()
     return render(request, 'upload.html', {'form': form})
@@ -30,6 +30,3 @@ def prize_list(request):
     prizes = Prize.objects.all()
     return render(request, 'prize_list.html', {'prizes': prizes})
 
-def event_list(request):
-    events = Event.objects.all()
-    return render(request, 'event_list.html', {'events': events})
