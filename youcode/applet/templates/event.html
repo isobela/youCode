@@ -1,11 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div class="navbar">
+    <div>
+        <img src="/applet/static/images/Logo.png" alt="Logo" class="logo">
+        <link rel="stylesheet" type="text/css"  href="/applet/static/styles.css">
+    </div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="{% url 'about_us' %}">About Us</a>
+        <a href="{% url 'upload_event' %}">Create</a>
+        <a href="{% url 'prize_list' %}">Prizes</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'signup' %}">Sign Up Here</a>
+    </div>
+</div>
+<p></p>
+<div class="sign-up-container"></div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ event.event_name }}</title>
-</head>
-<body>
     <div>
         <h1>{{ event.event_name }}</h1>
         <p><strong>Date:</strong> {{ event.event_date }}</p>
@@ -22,5 +38,5 @@
         <img src="{{ event.image.url }}" alt="{{ event.event_name }}">
         <p><strong>Coins:</strong> {{ event.coins }}</p>
     </div>
-</body>
-</html>
+</div>
+{% endblock %}

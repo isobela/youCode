@@ -35,20 +35,16 @@
 </div>
 <div class="placeholder-image">
 <img src="/applet/static/images/home_background.png" >
-    <div class="search-bar-container">
+<div class="search-bar-container">
+    <form method="GET" action="{% url 'home' %}">
         <div class="find-friends-text">
             Find new friends and your next adventure!
         </div>
         <div class="search-bar">
-            <input type="text" placeholder="Search events and people around you" list="events">
-            <datalist id="events">
-                <option value="Morning Yoga Sessions">
-                <option value="Learn Hiking Basics and Essentials">
-                <option value="Snowboard and Ski Trip to Cyp">
-            </datalist>
-            <button>Search</button>
+            <input type="text" name="query" placeholder="Search events and people around you">
+            <button type="submit">Search</button>
         </div>
-    </div>
+    </form>
 </div>
 <div class="upcoming-events">
     <div class="UE-title">Upcoming Events</div>
