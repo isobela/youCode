@@ -42,3 +42,8 @@ def prize_list(request):
     prizes = Prize.objects.all()
     return render(request, 'prize_list.html', {'prizes': prizes})
 
+def about_us(request):
+    return render(request, 'about_us.html')
+
+def create_pe
+

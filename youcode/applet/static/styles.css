@@ -123,3 +123,124 @@ h1 {
     font-size: 17px;
     margin-top: 5px;
 }
+
+.login-container {
+    margin: 0 auto;
+    width: 300px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-input {
+    margin-bottom: 20px;
+}
+
+.login-input input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+.sign-up-container {
+    margin: 0 auto;
+    width: 300px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sign-up-container {
+    margin: 0 auto;
+    width: 300px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.signup-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.icon-placeholder {
+    margin-bottom: 20px;
+    height: 50px; /* Set the height for the icon placeholder */
+    background-color: #ccc; /* Light grey background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sign-up-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sign-up-container button:hover {
+    background-color: #45a049;
+}
+
+
+.icon-placeholder {
+    margin: 20px auto; /* Center the icon vertically and horizontally */
+    width: 50px;
+    height: 50px; /* Set the height for the icon placeholder */
+    background-color: #ccc; /* Light grey background */
+    border-radius: 5px; /* Rounded corners */
+}
