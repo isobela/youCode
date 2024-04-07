@@ -1,7 +1,46 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/Lato/fonts/Lato-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/Lato/fonts/Lato-Bold.ttf') format('truetype');
+}
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family:'Lato', sans-serif;
+}
+div {
+    text-align: center;
+}
+.my-heading {
+    font-size: 35px;
+}
+.prize-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.prize-item {
+    text-align: center;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+.prize-item div {
+    margin-top: 0;
+}
+.prize-item img {
+    width: 100%; /* Set the width of the image to 100% of its container */
 }
 .navbar {
     display: flex;
@@ -43,4 +82,17 @@ h1 {
     background-position: center;
     margin-top: 20px; /* Adjust margin as needed */
     position: relative;
+}
+.prize-item {
+    display: inline-block;
+    margin: 0 30px; /* Adjust margin to space out the items */
+    text-align: center;
+}
+
+.prize-item img {
+    transition: transform 0.3s; /* Add transition for smooth effect */
+}
+
+.prize-item img:hover {
+    transform: scale(1.1); /* Scale up by 10% on hover */
 }
