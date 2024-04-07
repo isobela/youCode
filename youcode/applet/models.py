@@ -14,3 +14,5 @@ class Event(models.Model):
     attendees = models.ManyToManyField(People, related_name='attended_events')  
     # Specify a unique related_name for attendees
     image = models.ImageField(upload_to='event_images/')
+    coins = models.IntegerField()
+    
