@@ -45,5 +45,4 @@ def prize_list(request):
 def about_us(request):
     return render(request, 'about_us.html')
 
-def create_pe
 

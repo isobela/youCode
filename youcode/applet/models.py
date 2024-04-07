@@ -1,6 +1,12 @@
 from django.db import models
 from datetime import datetime
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser, BaseUserManager
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete= models.CASCADE)
+    coins = models.IntegerField(default=0)
+
+
 
 class People(models.Model):
     name = models.CharField(max_length=200)
