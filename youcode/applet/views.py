@@ -3,6 +3,8 @@ from .forms import EventForm
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
+from .models import Prize
+
 
 
 class SignUpView(CreateView):
@@ -20,3 +22,7 @@ def upload_event(request):
     else:
         form = EventForm()
     return render(request, 'upload.html', {'form': form})
+
+def prize_list(request):
+    prizes = Prize.objects.all()
+    return render(request, 'prize_list.html', {'prizes': prizes})
