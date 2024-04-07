@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ event.event_name }}</title>
+</head>
+<body>
+    <div>
+        <h1>{{ event.event_name }}</h1>
+        <p><strong>Date:</strong> {{ event.event_date }}</p>
+        <p><strong>Location:</strong> {{ event.location }}</p>
+        <p><strong>Instructor:</strong> {{ event.instructor }}</p>
+        <p><strong>Description:</strong> {{ event.description }}</p>
+        <p><strong>Attendees:</strong></p>
+        <ul>
+            {% for attendee in event.attendees.all %}
+                <li>{{ attendee.username }}</li>
+            {% endfor %}
+        </ul>
+        <p><strong>Image:</strong></p>
+        <img src="{{ event.image.url }}" alt="{{ event.event_name }}">
+        <p><strong>Coins:</strong> {{ event.coins }}</p>
+    </div>
+</body>
+</html>

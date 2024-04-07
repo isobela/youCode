@@ -41,6 +41,9 @@ def about_us(request):
 def home(request):
     events = Event.objects.all()
     return render(request, 'home2.html', {'events': events})
+
+def event_display(request, event):
+    return render(request , 'event.html', {'event': event} )
     
 
 
