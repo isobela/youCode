@@ -1,0 +1,17 @@
+<!-- prize_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prize List</title>
+</head>
+<body>
+    <h1>Prize List</h1>
+    {% for prize in prizes %}
+        <div>
+            <h2>{{ prize.prize_name }}</h2>
+            <p>Coins Required: {{ prize.price }}</p>
+            <img src="{{ prize.prize_image.url }}" alt="{{ prize.prize_name }}">
+        </div>
+    {% endfor %}
+</body>
+</html>
