@@ -5,7 +5,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from .models import Prize
 from .models import Event
-from PIL import Image
+from django.contrib.auth.models import User
 
 
 def home(request):
@@ -21,18 +21,7 @@ def upload_event(request):
     if request.method == 'POST':
         form = EventForm(request.POST, request.FILES)
         if form.is_valid():
-            event_name = form.cleaned_data["event_name"]
-            event_date = form.cleaned_data["event_date"]
-            location = form.cleaned_data["location"]
-            instructor = form.cleaned_data["instructor"]
-            description = form.cleaned_data["description"]
-            image = request.FILES["image"]
-           
-        
-            coins = form.cleaned_data["coins"]
-            event = Event.objects.create(event_name = event_name, event_date = event_date,location= location,
-                                 instructor=  instructor,  description = description, image = image, coins =  coins)
-            event.save()
+            form.save()
             return redirect('home')  # Redirect to event list page
     else:
         form = EventForm()
@@ -45,5 +34,5 @@ def prize_list(request):
 def about_us(request):
     return render(request, 'about_us.html')
 
-# def create_pe
+
 
