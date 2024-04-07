@@ -2,10 +2,75 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="/applet/static/prize.css">
     <title>Prize List</title>
 </head>
 <body>
+<div class="navbar">
+    <div>
+        <img src="/applet/static/images/Logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Workshops</a>
+        <a href="#">Create</a>
+        <a href="/applet/templates/registration/login.html">Login</a>
+        <a href="/applet/templates/registration/signup.html">Sign Up Here</a>
+    
+    </div>
+</div>
+<style>
+    body {
+        font-family:'Lato', sans-serif;
+    }
+    h1 {
+        text-align: center;
+    }
+    .prize-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .prize-item {
+        text-align: center;
+        width: 200px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #f9f9f9;
+        position: relative;
+    }
+    .prize-item h2 {
+        margin-top: 0;
+    }
+    .prize-item img {
+        width: 100%; /* Set the width of the image to 100% of its container */
+    }
+</style>
+<body>
     <h1>Prize List</h1>
+    <div class="prize-container">
+        <div class="prize-item">
+            <h2>Atom Hoody Daybreak</h2>
+            <p>Points Required: 100</p>
+            <img id="jacket_image" src="/media/prize_images/jacket.jpg" alt="Jacket">
+        </div>
+        <div class="prize-item">
+            <h2>Travel Mug</h2>
+            <p>Points Required: 200</p>
+            <img id="prize2_image" src="/media/prize_images/mug.jpg" alt="Mug">
+        </div>
+        <div class="prize-item">
+            <h2>Mantis 16 Backpack</h2>
+            <p>Coins Required: 300</p>
+            <img id="prize3_image" src="/media/prize_images/backpack.jpg" alt="Backpack">
+        </div>
+    </div>
+</body>
+
+    <!-- <h1>Prize List</h1>
     {% for prize in prizes %}
         <div>
             <h2>{{ prize.prize_name }}</h2>
@@ -13,5 +78,5 @@
             <img src = "{{ prize.image.url }}" >
         </div>
     {% endfor %}
-</body>
+</body> -->
 </html>
