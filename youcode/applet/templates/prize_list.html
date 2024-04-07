@@ -22,7 +22,18 @@
 </div>
 <body>
     <div class="my-heading">Prize List</div>
-    <div class="prize-container">
+    <body>
+        <div class="prize-container">
+            {% for prize in prizes %}
+            <div class="prize-item">
+                <h4>{{ prize.prize_name }}</h4>
+                <p>Points Required: {{ prize.price }}</p>
+                <img src="{{ prize.image.url }}" >
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+    <!-- <div class="prize-container">
         <div class="prize-item">
             <h4>Atom Hoody Daybreak</h4>
             <p>Points Required: 100,000</p>
