@@ -14,7 +14,7 @@ class Event(models.Model):
     instructor = models.CharField(max_length=200)  
     # Specify a unique related_name for instructor
     description = models.CharField(max_length=500)
-    attendees = models.ManyToManyField(User, related_name='attended_events')  
+    attendees = models.ManyToManyField(User, related_name='attended_events',  blank=True)  
     # Specify a unique related_name for attendees
     image = models.ImageField(upload_to='event_images/')
     coins = models.IntegerField(default=0)
