@@ -271,6 +271,7 @@ h1 {
     flex-direction: column;
     height: 100vh; /* Make the container full height of the viewport */
     padding: 20px;
+    margin-top: 20px;
 }
 
 .event-details {
