@@ -6,6 +6,8 @@ from django.views.generic import CreateView
 from .models import Prize
 
 
+def home(request):
+    return render(request, template_name='home2.html')
 
 class SignUpView(CreateView):
     form_class = UserCreationForm
