@@ -34,5 +34,8 @@ def prize_list(request):
 def about_us(request):
     return render(request, 'about_us.html')
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 33dbd5dceeebfa6c5c380f11f4e0a9cf0f8839aa
 
