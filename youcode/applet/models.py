@@ -10,8 +10,10 @@ class People(models.Model):
     coins = models.IntegerField(default=0)
 
 
-class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
-
+class Event(models.Model):
+    event_name = models.CharField(max_length=100)
+    location = models.CharField
+    instructor = People
+    description = models.CharField(max_length=500)
+    attendees = models.ManyToOneRel(field_name = "people" ,to=People)
+    image = models.ImageField()
