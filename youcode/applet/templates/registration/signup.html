@@ -4,6 +4,21 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
+<div class="navbar">
+    <div>
+        <img src="/youcode/images/Logo.png" alt="Logo" class="logo">
+        <link rel="stylesheet" href="/youcode/applet/templates/styles.css">
+
+    </div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Workshops</a>
+        <a href="#">Create</a>
+        <a href="/youcode/applet/templates/registration/login.html">Login</a>
+        <a href="/youcode/applet/templates/registration/signup.html">Sign Up Here</a>
+    </div>
+</div>
 <h2>Sign up</h2>
 <form method="post">
   {% csrf_token %}
