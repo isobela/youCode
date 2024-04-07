@@ -14,6 +14,14 @@
     <div>
         <img src="/applet/static/images/Logo.png" alt="Logo" class="logo">
     </div>
+    
+    {% if request.user.is_authenticated %}
+    <p>Welcome, {{ request.user.username }}!</p>
+    <!-- Display features for authenticated users -->
+{% else %}
+    <p>Welcome, Guest!</p>
+    <!-- Display features for guests -->
+{% endif %}
     <div class="nav-links">
         <a href="/">Home</a>
         <a href="{% url 'about_us' %}">About Us</a></li>
