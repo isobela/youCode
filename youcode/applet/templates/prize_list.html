@@ -33,23 +33,7 @@
             {% endfor %}
         </div>
     </body>
-    <!-- <div class="prize-container">
-        <div class="prize-item">
-            <h4>Atom Hoody Daybreak</h4>
-            <p>Points Required: 100,000</p>
-            <img id="jacket_image" src="/media/prize_images/jacket.jpg" alt="Jacket">
-        </div>
-        <div class="prize-item">
-            <h4>Travel Mug</h4>
-            <p>Points Required: 20,000</p>
-            <img id="prize2_image" src="/media/prize_images/mug.jpg" alt="Mug">
-        </div>
-        <div class="prize-item">
-            <h4>Mantis 16 Backpack</h4>
-            <p>Points Required: 50,000</p>
-            <img id="prize3_image" src="/media/prize_images/backpack.jpg" alt="Backpack">
-        </div>
-    </div>
+
     {% if request.user.is_authenticated %}
     <p> You have , {{ userprofile.coins }} coins !</p>
     <!-- Display features for authenticated users -->
@@ -57,15 +41,4 @@
     <p>You have no coins</p>
     <!-- Display features for guests -->
 {% endif %}
-</body>
-
-    <!-- <h1>Prize List</h1>
-    {% for prize in prizes %}
-        <div>
-            <h2>{{ prize.prize_name }}</h2>
-            <p>Coins Required: {{ prize.price }}</p>
-            <img src = "{{ prize.image.url }}" >
-        </div>
-    {% endfor %}
-</body> -->
 </html>
