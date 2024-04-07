@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import EventForm
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
@@ -48,8 +48,15 @@ def home(request):
 
     return render(request, 'home2.html', {'events': events})
 
-def event_display(request, event):
-    return render(request , 'event.html', {'event': event} )
+def event_display(request):
+    if request.method == 'POST':
+        event_id = request.POST.get('event_id')
+        event = get_object_or_404(Event, pk=event_id)
+        # Now you have access to the 'event' object in your view
+        return render(request, 'event.html', {'event': event})
+    else:
+        # Handle GET request (if needed)
+        pass
     
 
 
