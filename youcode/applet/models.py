@@ -13,7 +13,7 @@ class People(models.Model):
 class Event(models.Model):
     event_name = models.CharField(max_length=100)
     location = models.CharField
-    instructor = People
+    instructor = models.ForeignKey(People)
     description = models.CharField(max_length=500)
     attendees = models.ManyToOneRel(field_name = "people" ,to=People)
     image = models.ImageField()
