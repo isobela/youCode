@@ -25,7 +25,6 @@
     <div class="nav-links">
         <a href="/">Home</a>
         <a href="{% url 'about_us' %}">About Us</a></li>
-        <a href="#">Workshops</a>
         <a href="{% url 'upload_event' %}">Create</a>
         <a href="{% url 'prize_list' %}">Prizes</a>
         <a href="{% url 'login' %}">Login</a>
@@ -50,17 +49,24 @@
     </div>
 </div>
 <div class="upcoming-events">
+    <div class="UE-title">Upcoming Events</div>
     <div class="event-container">
         {% for event in events %}
-        <div class="event-item">
-            <h4>{{ event.event_name }}</h4>
-            <p>Date: {{ event.event_date }}</p>
-            <p>Location: {{ event.location }}</p>
-            <p>Instructor: {{ event.instructor }}</p>
-            <!-- Add more details as needed -->
-            <img src="{{ event.image.url }}" alt="{{ event.event_name }}">
+        <div class="event">
+            <div class="event-image">
+                <a href="#"><img src="{{ event.image.url }}" alt="{{ event.event_name }}"></a>
+            </div>
+            <div class="event-label">{{ event.event_name }}</div>
+            <div class="event-details">
+                <p>Date: {{ event.event_date }}</p>
+                <p>Location: {{ event.location }}</p>
+                <p>Instructor: {{ event.instructor }}</p>
+                <!-- Add more details as needed -->
+            </div>
         </div>
         {% endfor %}
+    </div>
+</div>
 
 </div>
 </body>

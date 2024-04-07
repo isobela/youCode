@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="stylesheet" href="/applet/static/styles.css">
+<link rel="stylesheet" type="text/css" href="/applet/static/styles.css">
 <title>Health&Harmony</title>
-
 
 </head>
 <body>
@@ -14,7 +13,6 @@
     <div class="nav-links">
         <a href="/">Home</a>
         <a href="{% url 'about_us' %}">About Us</a></li>
-        <a href="#">Workshops</a>
         <a href="{% url 'upload_event' %}">Create</a>
         <a href="{% url 'prize_list' %}">Prizes</a>
         <a href="{% url 'login' %}">Login</a>
@@ -24,17 +22,14 @@
 </div>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
     <title>About Us</title>
 </head>
 <body>
-    <div class="container">
+    <div class="about_container">
         <h1>About Health&Harmony</h1>
         <main>
             <section id="mission">
-                <h2>Our Mission</h2>
+                <h2 class="about-heading">Our Mission</h2>
                 <p>At Health&Harmony, our mission is to empower individuals to prioritize wellness and embrace healthy lifestyles. 
                     We believe that true well-being encompasses physical, mental, and emotional health, and we are committed to providing 
                     the resources and support necessary for individuals to thrive in all aspects of their lives. We aim to encourage individuals
@@ -43,7 +38,7 @@
                 <!-- Additional content about mission -->
             </section>
             <section id="journey">
-                <h2>Our Journey</h2>
+                <h2 class="about-heading">Our Journey</h2>
                 <p>Health&Harmony's journey is a testament to our unwavering commitment to reshaping wellness in the digital era. From inception, 
                     we've strived to seamlessly integrate the omnichannel experience, bridging technology with holistic well-being. Through diligent research, 
                     collaboration, and innovation, we've forged a platform that empowers individuals to prioritize health and happiness effortlessly. Every milestone reached signifies a step closer to our vision of a 
@@ -52,17 +47,17 @@
                 <!-- Additional content about journey -->
             </section>
             <section id="workshops">
-                <h2>Our Workshops</h2>
+                <h2 class="about-heading">Our Workshops</h2>
                 <p>Through our innovative platform, we offer a diverse range of wellness workshops designed to cater to every aspect of your well-being, from yoga and meditation to nutrition and mindfulness. Our workshops are led by experienced practitioners and thought leaders, ensuring that you receive the highest quality guidance on your wellness journey.</p>
                 <!-- Additional content about workshops -->
             </section>
             <section id="community">
-                <h2>Our Community</h2>
+                <h2 class="about-heading">Our Community</h2>
                 <p>But Health&Harmony is more than just a platform for workshops – it's a community. We believe in the power of connection and support in achieving wellness goals, which is why we foster a vibrant community where members can share their experiences, learn from each other, and grow together.</p>
                 <!-- Additional content about community -->
             </section>
             <section id="rewards">
-                <h2>Our Rewards</h2>
+                <h2 class="about-heading">Our Rewards</h2>
                 <p>What sets us apart is our unique rewards system. By participating in workshops, you earn coins that can be redeemed for carefully curated wellness products, allowing you to further enhance your self-care routine at home. It's our way of incentivizing and rewarding your commitment to wellness.</p>
                 <!-- Additional content about rewards -->
             </section>
