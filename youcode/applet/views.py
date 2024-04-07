@@ -5,6 +5,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from .models import Prize
 from .models import Event
+from django.contrib.auth.models import User
 
 
 def home(request):
@@ -33,5 +34,5 @@ def prize_list(request):
 def about_us(request):
     return render(request, 'about_us.html')
 
-def create_pe
+
 
