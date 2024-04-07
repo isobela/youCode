@@ -103,7 +103,8 @@ h1 {
     display: inline-block;
     margin: 0 30px; /* Adjust margin to space out the events */
     text-align: center;
-    transition: transform 0.3s; /* Add transition for smooth effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+    margin-bottom: 50px;
 }
 .event-image img {
     width: 200px;
@@ -248,4 +249,16 @@ h1 {
 .about-heading {
     font-family: 'Lato', sans-serif;
     text-align: center; /* Center-align the headings */
+}
+.green-button {
+    background-color: #7DA25F; /* Green color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Add cursor style */
+}
+
+.green-button:hover {
+    background-color: #5F7D4C; /* Darker green color on hover */
 }
