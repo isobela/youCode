@@ -283,3 +283,6 @@ h1 {
 .event-details img {
     max-width: 100%; /* Ensure the image doesn't exceed its container */
 }
+.centered-text {
+    text-align: center;
+}
