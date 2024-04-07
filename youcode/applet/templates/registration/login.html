@@ -1,25 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}Login{% endblock %}
-
-{% block content %}
-<div class="navbar">
-    <div>
-        <img src="/applet/static/images/Logo.png" alt="Logo" class="logo">
-        <link rel="stylesheet" type="text/css"  href="/applet/static/styles.css">
-    </div>
-    <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Workshops</a>
-        <a href="#">Create</a>
-        <a href="{% url 'login' %}">Login</a>
-        <a href="{% url 'signup' %}">Sign Up Here</a>
-    </div>
-</div>
-<div class="login-container">
-    <div class="login-heading">Log In</div>
-    <div class="icon-placeholder"></div>
+    {% block title %}Login{% endblock %}
+    
+    {% block content %}
+    <h2>Log In</h2>
     <form method="post">
       {% csrf_token %}
       <div class="login-input">
