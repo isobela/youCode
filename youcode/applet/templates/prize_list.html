@@ -2,10 +2,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="/applet/static/prize.css">
     <title>Prize List</title>
 </head>
 <body>
-    <h1>Prize List</h1>
+<div class="navbar">
+    <div>
+        <img src="/applet/static/images/Logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Workshops</a>
+        <a href="#">Create</a>
+        <a href="/applet/templates/registration/login.html">Login</a>
+        <a href="/applet/templates/registration/signup.html">Sign Up Here</a>
+    
+    </div>
+</div>
+<body>
+    <div class="my-heading">Prize List</div>
+    <div class="prize-container">
+        <div class="prize-item">
+            <h4>Atom Hoody Daybreak</h4>
+            <p>Points Required: 100,000</p>
+            <img id="jacket_image" src="/media/prize_images/jacket.jpg" alt="Jacket">
+        </div>
+        <div class="prize-item">
+            <h4>Travel Mug</h4>
+            <p>Points Required: 20,000</p>
+            <img id="prize2_image" src="/media/prize_images/mug.jpg" alt="Mug">
+        </div>
+        <div class="prize-item">
+            <h4>Mantis 16 Backpack</h4>
+            <p>Points Required: 50,000</p>
+            <img id="prize3_image" src="/media/prize_images/backpack.jpg" alt="Backpack">
+        </div>
+    </div>
+</body>
+
+    <!-- <h1>Prize List</h1>
     {% for prize in prizes %}
         <div>
             <h2>{{ prize.prize_name }}</h2>
@@ -13,5 +49,5 @@
             <img src = "{{ prize.image.url }}" >
         </div>
     {% endfor %}
-</body>
+</body> -->
 </html>
