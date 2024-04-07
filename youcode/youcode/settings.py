@@ -14,9 +14,10 @@ from pathlib import Path, os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path("/Users/elisegreen/youCode-3/youcode/applet")
+#BASE_DIR = Path("/Users/elisegreen/youCode-3/youcode")
+BASE_DIR = Path(__file__).resolve().parent.parent
 print(BASE_DIR)
-
+print("/youCode-3/youcode")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -119,9 +120,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/applet/static/'
 
-STATICFILES_DIRS = [BASE_DIR / '/static']
+STATICFILES_DIRS = [BASE_DIR / 'applet/static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
