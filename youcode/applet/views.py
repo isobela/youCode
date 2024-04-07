@@ -8,6 +8,7 @@ from .models import Event, UserProfile
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from .forms import EventSearchForm
 
 
 def home(request):
@@ -39,7 +40,12 @@ def about_us(request):
     return render(request, 'about_us.html')
 
 def home(request):
+    form = EventSearchForm(request.GET)
     events = Event.objects.all()
+    if form.is_valid() and form.cleaned_data['query']:
+        query = form.cleaned_data['query']
+        events = events.filter(event_name__icontains=query)
+
     return render(request, 'home2.html', {'events': events})
 
 def event_display(request, event):

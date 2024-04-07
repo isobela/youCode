@@ -10,4 +10,5 @@ class EventForm(forms.ModelForm):
         model = Event
         fields = ['event_name', 'event_date',  'location', 'description',  'image', 'coins', 'instructor']
 
-
+class EventSearchForm(forms.Form):
+    query = forms.CharField(label='Search for events', max_length=100)
