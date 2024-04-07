@@ -34,10 +34,15 @@
     </body>
 
     {% if request.user.is_authenticated %}
-    <p> You have , {{ userprofile.coins }} coins !</p>
-    <!-- Display features for authenticated users -->
+    {% if userprofile %}
+        <p>You have {{ userprofile.coins }} coins!</p>
+        <!-- Display features for authenticated users -->
+    {% else %}
+        <p>User profile not found.</p>
+        <!-- Handle case where user profile doesn't exist -->
+    {% endif %}
 {% else %}
-    <p>You have no coins</p>
+    <p>You are not logged in.</p>
     <!-- Display features for guests -->
 {% endif %}
 </html>
